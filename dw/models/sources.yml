@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    database: dbt  
+    schema: public  
+    tables:
+      - name: orders
+        identifier: jaffle_shop_orders
+      - name: customers
+        identifier: jaffle_shop_customers
+
+  - name: stripe
+    tables:
+      - name: payments
+        identifier: stripe_payments
